@@ -10,17 +10,17 @@ public class Director {
 	public void playScenario(){
 		System.out.println("<ADMIN> : 인형뽑기 시나리오를 시작합니다.");
 		
-		// 1단계 : 횡단보도를 만든다
-		System.out.println("<ADMIN> : 힝단보도를 생성합니다.");
+		// 1단계 : 인형뽑기 기계를 생성한다
+		System.out.println("<ADMIN> : 인형뽑기 기계를 생성합니다.");
 		CrossWalk crosswalk = new CrossWalk();
 				
 		
 		// 2딘계 : 보행자를 만든다
-		System.out.println("<ADMIN> : 보행자를 생성합니다.");
+		System.out.println("<ADMIN> : 사용자를 생성합니다.");
 		Pedestrian pedestrian = new Pedestrian();
 		
 		// 3단계 : 보행자에게 길 건너기를 시킨다
-		System.out.println("<ADMIN> : 보행자에게 길을 건너게 합니다");
+		System.out.println("<ADMIN> : 사용자에게 인형을 뽑게 합니다");
 		pedestrian.cross(crosswalk);
 		
 	}
