@@ -21,7 +21,7 @@ public class Director {
 		System.out.println("<ADMIN> : 사용자에게 동전을 넣도록 지시합니다.");
 		user.insertcoin(crane);
 		
-		// 3단계 : 보행자에게 길 건너기를 시킨다
+		// 3단계 : 사용자에게 길 건너기를 시킨다
 		System.out.println("<ADMIN> : 사용자에게 인형을 뽑게 합니다");
 		user.pickup(crane);
 		
