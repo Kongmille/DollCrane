@@ -1,9 +1,11 @@
 package DollCraneSystem;
 
 public class CraneMap {
-	int map[][] = new int[3][3];
+	int map[][] = new int[3][3]; //맵 범위 설정
 	
-	public CraneMap()
+	Doll doll = new Doll();
+
+	public CraneMap() //맵 생성
 	{
 		for (int i = 0; i < 2; i++) {
 			for (int j = 0; j < 2 - i; j++) {

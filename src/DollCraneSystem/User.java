@@ -19,9 +19,14 @@ public class User {
 	public void pickup(Crane crane) {
 		//Controller tempcoin = someplace.controlsignal();
 		Controller control = crane.getControl();
+		
+		//임의로 내부에서 사용자의 조이스틱 동작 지정
 		control.controlJoystick("right");
+		System.out.println("<User> : 우측으로 한번 조이스틱을 움직입니다.");
 		control.controlJoystick("right");
+		System.out.println("<User> : 우측으로 한번 조이스틱을 움직입니다.");
 		control.controlJoystick("down");
+		System.out.println("<User> : 아래로 한번 조이스틱을 움직입니다.");
 	}
 
 

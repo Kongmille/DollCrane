@@ -44,6 +44,6 @@ public class Controller {
 	}
 
 	public void controlDownbutton() {
-		
+		downButton.DownButton();  //다운버튼 누르기
 	}
 }
