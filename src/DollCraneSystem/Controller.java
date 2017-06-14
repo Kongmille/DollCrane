@@ -1,17 +1,15 @@
 package DollCraneSystem;
 
 public class Controller {
-	JoyStick joyStick = new JoyStick();
-	DownButton downButton = new DownButton();
 	int position[] = new int[2];
-
+	CraneMap dollMap = new CraneMap();
 	public void controlJoystick(String direction) {
-		joyStick.setDirection(direction);
 		setPosition();
+		System.out.println("크레인을 " + direction + "으로 이동합니다.");
 	}
 	
 	public void setPosition() {
-		String direction = joyStick.getDirection();
+		String direction = "";//
 
 		if(direction.equals("left") || direction.equals("right")) {
 			if(direction.equals("left")) {
@@ -44,6 +42,8 @@ public class Controller {
 	}
 
 	public void controlDownbutton() {
-		downButton.DownButton();  //다운버튼 누르기
+		dollMap.getDoll(position[0], position[1]);
+		dollMap.setNullDoll(position[0], position[1]);
+		System.out.println("<Controller> : 인형을 집었습니다.");
 	}
 }

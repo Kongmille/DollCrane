@@ -1,23 +1,39 @@
 package DollCraneSystem;
 
 public class CraneMap {
-	int map[][] = new int[3][3]; //맵 범위 설정
+
+	Doll map[][] = new Doll[3][3]; //맵 범위 설정
 	
-	Doll doll = new Doll();
+	
 
 	public CraneMap() //맵 생성
 	{
-		for (int i = 0; i < 2; i++) {
-			for (int j = 0; j < 2 - i; j++) {
-				if( !(i==0 && j==0) ) {
-					map[i][j] = 1;
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if(i==0 && j==0) {
+					
+				} else {
+					map[i][j] = new Doll();
+					//System.out.println(map[i][j]);
 				}
 			}
 		}
 	}
 
-	public int[][] getMap() {
+	public Doll[][] getMap() {
 		return map;
+	}
+	
+	public Doll getDoll(int X, int Y){
+		return map[X][Y];
+	}
+	
+	public void setNullDoll(int X, int Y){
+		map[X][Y] = null;
+	}
+	
+	public void setMap(Doll[][] newMap){
+		map = newMap;
 	}
 
 }
